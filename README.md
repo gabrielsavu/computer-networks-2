@@ -16,3 +16,7 @@ def functie(nume):
 
 functie('fmi.unibuc.ro')
 ```
+
+Exercitiul 2:
+
+![](images/HTTP.2.png)

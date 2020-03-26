@@ -121,7 +121,7 @@ server_address = (adresa, port)
 ca la udp
 
 **Exercitiul 4:**
-ca la udp
+![](images/TCP.4.png)
 
 **Exercitiul 5:**
 

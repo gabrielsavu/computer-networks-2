@@ -88,3 +88,21 @@ server_address = (adresa, port)
 **Exercitiul 6:**
 
 ![](images/UDP.6.png)
+
+
+**Exercitiul 7:**
+
+```
+18:40:20.858635 IP (tos 0x0, ttl 64, id 29532, offset 0, flags [DF], proto UDP (17), length 41)
+    172.9.1.1.60564 > 172.9.0.2.8001: [bad udp cksum 0x593c -> 0xf1a3!] UDP, length 13
+	0x0000:  4500 0029 735c 4000 4011 6e52 ac09 0101  E..)s\@.@.nR....
+	0x0010:  ac09 0002 ec94 1f41 0015 593c 6d65 7361  .......A..Y<mesa
+	0x0020:  6a20 6465 2074 6573 74                   j.de.test
+18:40:20.859073 IP (tos 0x0, ttl 64, id 46690, offset 0, flags [DF], proto UDP (17), length 41)
+    172.9.0.2.8001 > 172.9.1.1.60564: [bad udp cksum 0x593c -> 0xf1a3!] UDP, length 13
+	0x0000:  4500 0029 b662 4000 4011 2b4c ac09 0002  E..).b@.@.+L....
+	0x0010:  ac09 0101 1f41 ec94 0015 593c 6d65 7361  .....A....Y<mesa
+	0x0020:  6a20 6465 2074 6573 74                   j.de.test
+```
+
+![](images/UDP.7.png)

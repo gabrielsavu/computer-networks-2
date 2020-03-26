@@ -63,7 +63,7 @@ Le-am citit si le stiam.
 
 ```python
 port = 10000
-adresa = '172.9.0.1'
+adresa = '0.0.0.0'
 server_address = (adresa, port)
 ```
 
@@ -106,3 +106,42 @@ server_address = (adresa, port)
 ```
 
 ![](images/UDP.7.png)
+
+
+# TCP
+
+**Exercitiul 1:**
+
+![](images/TCP.1.png)
+
+**Exercitiul 2:**
+![](images/TCP.2.png)
+
+**Exercitiul 3:**
+ca la udp
+
+**Exercitiul 4:**
+ca la udp
+
+**Exercitiul 5:**
+
+```
+IP 172.9.0.1.45572 > 172.9.0.2.10000: Flags [S], seq 2626297471, win 64240, options [mss 1460,sackOK,TS val 966816944 ecr 0,nop,wscale 7], length 0
+IP 172.9.0.2.10000 > 172.9.0.1.45572: Flags [S.], seq 3632789865, ack 2626297472, win 65160, options [mss 1460,sackOK,TS val 1825345779 ecr 966816944,nop,wscale 7], length 0
+IP 172.9.0.1.45572 > 172.9.0.2.10000: Flags [.], ack 3632789866, win 502, options [nop,nop,TS val 966816944 ecr 1825345779], length 0
+IP 172.9.0.1.45572 > 172.9.0.2.10000: Flags [P.], seq 2626297472:2626297473, ack 3632789866, win 502, options [nop,nop,TS val 966819947 ecr 1825345779], length 1
+IP 172.9.0.2.10000 > 172.9.0.1.45572: Flags [.], ack 2626297473, win 510, options [nop,nop,TS val 1825348782 ecr 966819947], length 0
+IP 172.9.0.1.45572 > 172.9.0.2.10000: Flags [F.], seq 2626297473, ack 3632789866, win 502, options [nop,nop,TS val 966819947 ecr 1825348782], length 0
+IP 172.9.0.2.10000 > 172.9.0.1.45572: Flags [F.], seq 3632789866, ack 2626297474, win 510, options [nop,nop,TS val 1825348782 ecr 966819947], length 0
+IP 172.9.0.1.45572 > 172.9.0.2.10000: Flags [.], ack 3632789867, win 502, options [nop,nop,TS val 966819947 ecr 1825348782], length 0
+```
+
+Primele 3 linii din tcpdump-ul de mai sus reprezinta cele 3 pachete schimbate intre client si server in procesul numit "the three way handshake".
+
+*:45572 este clientul
+*:10000 este serverul
+
+Se observa ca primul pachet trimis de la client la server are la flags setat SYN si a trimis sequence number 2626297471. Asta inseamna ca doreste sa se sincronizeze cu serverul (cu sequance numberul trimis) si asteapta inapoi un acknowledge.
+Serverul trimite catre client acknowledge la 2626297472 si synchronize cu squance number 3632789865, la flag setat ACK si SYN.
+Dupa care clientul trimite un acknowledge la 3632789866. In acest moment intre client si server exista o sincronizare. Clientul si serverul stiu urmatoarele pachete cu ce seq. number sa le trimita pentru a putea fi intelese in ordinea corespunzatoare.
+

@@ -21,11 +21,11 @@ Exercitiul 2:
 
 ![](images/HTTP.2.png)
 
-Exercitiu 3:
+*Exercitiu 3:*
 
 ![](images/HTTP.3-1.png)
 
-Modificari la functia post_method:
+Modificari la functia post_method din rt1:
 ```python
 @app.route('/post', methods=['POST'])
 def post_method():

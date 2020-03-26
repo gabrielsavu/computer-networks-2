@@ -2,7 +2,7 @@
 
 # HTTP/S
 
-Exercitiul 1:
+**Exercitiul 1:**
 
 ```python
 import requests
@@ -17,11 +17,11 @@ def functie(nume):
 functie('fmi.unibuc.ro')
 ```
 
-Exercitiul 2:
+**Exercitiul 2:**
 
 ![](images/HTTP.2.png)
 
-*Exercitiu 3:*
+**Exercitiu 3:**
 
 ![](images/HTTP.3-1.png)
 
@@ -45,3 +45,46 @@ print(r.json())
 ```
 
 ![](images/HTTP.3-2.png)
+
+
+**Exercitiul 4:**
+
+Le-am citit si le stiam.
+
+
+
+# UDP
+
+**Exercitiul 1:**
+
+![](images/UDP.1.png)
+
+**Exercitiul 2:**
+
+```python
+port = 10000
+adresa = '172.9.0.1'
+server_address = (adresa, port)
+```
+
+![](images/UDP.2.png)
+
+**Exercitiul 3:**
+
+![](images/UDP.3.png)
+
+**Exercitiul 4:**
+
+```python
+port = 10000
+adresa = 'rt1'
+server_address = (adresa, port)
+```
+
+**Exercitiul 5:**
+
+![](images/UDP.5.png)
+
+**Exercitiul 6:**
+
+![](images/UDP.6.png)

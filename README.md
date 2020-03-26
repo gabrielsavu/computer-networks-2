@@ -20,3 +20,28 @@ functie('fmi.unibuc.ro')
 Exercitiul 2:
 
 ![](images/HTTP.2.png)
+
+Exercitiu 3:
+
+![](images/HTTP.3-1.png)
+
+Modificari la functia post_method:
+```python
+@app.route('/post', methods=['POST'])
+def post_method():
+    r = request.get_json()
+    print("Got from user: ", r)
+    return jsonify({'value': int(r['value']) ** 2})
+```
+
+Requestul facut din rt2:
+
+```python
+import requests
+
+payload = {'value': 10}
+r = requests.post('http://rt1:8001/post', json=payload)
+print(r.json())
+```
+
+![](images/HTTP.3-2.png)

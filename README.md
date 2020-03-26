@@ -1,5 +1,9 @@
 # computer-networks-2
 
+# HTTP/S
+
+Exercitiul 1:
+
 ```python
 import requests
 

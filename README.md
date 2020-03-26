@@ -145,3 +145,8 @@ Se observa ca primul pachet trimis de la client la server are la flags setat SYN
 Serverul trimite catre client acknowledge la 2626297472 si synchronize cu squance number 3632789865, la flag setat ACK si SYN.
 Dupa care clientul trimite un acknowledge la 3632789866. In acest moment intre client si server exista o sincronizare. Clientul si serverul stiu urmatoarele pachete cu ce seq. number sa le trimita pentru a putea fi intelese in ordinea corespunzatoare.
 
+Ultimele 3 linii reprezina finalizarea conxiunii dintre cei 2.
+Primul pachet din cele 3 trimite care vine de la client are setat la flags FIN ce inseamna terminarea conexiunii.
+In acelasi timp are si ACK la ultimul pachet primit.
+Al doilea pachet vine de la server are si el setat FIN si ACK la flags, ceea ce indica faptul ca face acknowledge la 2626297474 si trimite urmatorul seq number: 3632789866.
+Al treilea pachet vine de la client si face acknowledge la 3632789867.
